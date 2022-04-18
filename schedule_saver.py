@@ -1,0 +1,35 @@
+abbreviations = ["ARI",
+                 "ATL",
+                 "BAL",
+                 "BOS",
+                 "CHW",
+                 "CHC",
+                 "CIN",
+                 "CLE",
+                 "COL",
+                 "DET",
+                 "HOU",
+                 "KC",
+                 "LAA",
+                 "LAD",
+                 "MIA",
+                 "MIL",
+                 "MIN",
+                 "NYM",
+                 "NYY",
+                 "OAK",
+                 "PHI",
+                 "PIT",
+                 "SD",
+                 "SF",
+                 "SEA",
+                 "STL",
+                 "TB",
+                 "TEX",
+                 "TOR",
+                 "WSN"]
+
+from pybaseball import schedule_and_record
+for team in abbreviations:
+    schedule = schedule_and_record(2017, team)
+    schedule.to_pickle("/Users/devonallison/code/Monopoly/src/main/thesis/data/schedules/" + team + ".pkl")
